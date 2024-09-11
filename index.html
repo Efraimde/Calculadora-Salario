@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Salário</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4">Calculadora de Salário</h1>
+        <form id="salaryForm">
+            <div class="form-group">
+                <label for="salarioBase">Salário Base:</label>
+                <input type="number" class="form-control" id="salarioBase" placeholder="R$" required>
+            </div>
+            <div class="form-group">
+                <label for="insalubridade">Insalubridade (% do salário mínimo):</label>
+                <input type="number" class="form-control" id="insalubridade" placeholder="%" step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="periculosidade">Periculosidade (% do salário base):</label>
+                <input type="number" class="form-control" id="periculosidade" placeholder="%" step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="valeRefeicao">Vale Refeição (R$ por dia):</label>
+                <input type="number" class="form-control" id="valeRefeicao" placeholder="R$">
+            </div>
+            <div class="form-group">
+                <label for="diasTrabalhados">Dias Trabalhados:</label>
+                <input type="number" class="form-control" id="diasTrabalhados" placeholder="Dias" required>
+            </div>
+            <div class="form-group">
+                <label for="percentualDescontoVale">Percentual de Desconto do Vale Refeição (%):</label>
+                <input type="number" class="form-control" id="percentualDescontoVale" placeholder="%" step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="percentualDescontoPassagem">Percentual de Desconto da Passagem (%):</label>
+                <input type="number" class="form-control" id="percentualDescontoPassagem" placeholder="%" step="0.01">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="calcular()">Calcular</button>
+        </form>
+        <div id="resultado" class="mt-4"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
